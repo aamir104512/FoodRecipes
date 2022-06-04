@@ -55,5 +55,6 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: Colors.secondary,
     borderRadius: 20,
+    borderColor: Colors.buttons
   },
 });

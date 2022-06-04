@@ -6,11 +6,15 @@ import CartComponent from '../components/CartComponent';
 export default function Cart() {
   return (
     <View style={styles.container}>
+
+      {/* Cart header */}
       <View style={styles.cartHeader}>
         <Text style={{color: Colors.white, fontSize: 24, fontWeight: 'bold'}}>
           My Cart
         </Text>
       </View>
+
+      {/* Cart component displaying image, title and descrioption. we are passing data here to CartComponent */}
       <View style={{marginRight: 70, marginTop: 40}}>
         <CartComponent
           image={require('../images/machaOats.png')}
