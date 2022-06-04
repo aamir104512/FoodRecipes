@@ -15,7 +15,24 @@ export default function HomeScreen() {
  
   return (
     <View style={styles.container}>
-      
+      {/* View for burger menu and user icon */}
+      <View style={styles.menu}>
+        <TouchableOpacity style={styles.secondView}>
+          <Image
+            source={require('../images/burger.png')}
+            style={styles.menuImage}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.secondView}>
+          <Image
+            source={require('../images/user.png')}
+            style={styles.menuImage}
+          />
+        </TouchableOpacity>
+      </View>
+
+      {/* header and subheader text */}
 
       
 
