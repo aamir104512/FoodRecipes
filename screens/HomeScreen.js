@@ -34,7 +34,14 @@ export default function HomeScreen() {
 
       {/* header and subheader text */}
 
-      
+      <View style={styles.headerView}>
+        <Text style={{color: Colors.white, fontSize: 40, fontWeight: 'bold'}}>
+          Types of recipes
+        </Text>
+        <Text style={{color: Colors.white, fontSize: 20, marginTop: 10}}>
+          Try the best recipes in the world
+        </Text>
+      </View>
 
       
     </View>
