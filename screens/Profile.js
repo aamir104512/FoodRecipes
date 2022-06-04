@@ -85,7 +85,7 @@ export default function Profile() {
           {/*country image view */}
           <View>
             <Image
-              source={require('../images/website.png')}
+              source={require('../images/country.png')}
               resizeMode="contain"
               style={styles.icon}
             />
