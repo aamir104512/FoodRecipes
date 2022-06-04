@@ -4,7 +4,10 @@ import React from 'react'
 export default function Search() {
   return (
     <View style={styles.container}>
-      <Text style={{color: 'white'}}> This is Search Screen</Text>
+      <View style={styles.searchHeader}>
+         <Text style={{color: 'white', fontSize: 24, fontWeight: 'bold'}}>Search Recipes</Text>
+      </View>
+      
     </View>
   )
 }
@@ -13,7 +16,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#161516',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
+        padding: 20
+    },
+     searchHeader: {
+       marginTop: 30,
+     }
 })
