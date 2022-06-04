@@ -1,10 +1,11 @@
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Colors from '../colors/Colors';
 import {useNavigation} from '@react-navigation/native'
 
 export default function Banner({data}) {
   const navigation = useNavigation();
+  const [cart, setCart] = useState('Add to Cart')
   return (
     <TouchableOpacity style={styles.container} onPress={()=> navigation.navigate('Recipe Details', {recipeData: data})}>
       <View style={{alignItems: 'center', marginTop: 10}}>
@@ -25,8 +26,8 @@ export default function Banner({data}) {
       <Text style={styles.Description}>{data.description}</Text>
 
       <View style={styles.cartView}>
-        <TouchableOpacity style={styles.cart}>
-          <Text style={{color: 'white'}}>Add to Cart</Text>
+        <TouchableOpacity style={styles.cart} onPress= {() => setCart('Added to Cart') }>
+          <Text style={{color: 'white'}}>{cart}</Text>
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
