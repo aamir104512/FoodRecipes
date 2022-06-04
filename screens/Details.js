@@ -2,14 +2,14 @@ import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import Colors from '../colors/Colors';
 
-export default function Details({route}) {
+export default function Details({route, navigation}) {
   const {recipeData} = route.params;
   return (
     <View style={styles.container}>
       {/* Header buttons (back button and favourtite button) */}
 
       <View style={styles.menu}>
-        <TouchableOpacity style={styles.secondView}>
+        <TouchableOpacity style={styles.secondView} onPress={() => navigation.goBack()}>
           <Image
             source={require('../images/back.png')}
             style={[styles.menuImage, {tintColor: Colors.white}]}
