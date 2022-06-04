@@ -13,7 +13,7 @@ export default function Search() {
       <View style={styles.searchInputView}>
         <TextInput placeholder="Search" style={styles.textInput} />
       </View>
-      <Text style={{marginTop: 30, fontSize: 20, fontWeight: 'bold'}}>
+      <Text style={{marginTop: 30, fontSize: 20, fontWeight: 'bold', color: Colors.buttons}}>
         Search History
       </Text>
       <View style={styles.historyContainer}>
@@ -50,11 +50,9 @@ const styles = StyleSheet.create({
   historyContainer: {
     marginTop: 10,
     padding: 10,
-    borderWidth: 1,
     height: '50%',
     width: '100%',
     backgroundColor: Colors.secondary,
     borderRadius: 20,
-    borderColor: Colors.buttons
   },
 });

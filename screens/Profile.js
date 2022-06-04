@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Colors from '../colors/Colors';
 
@@ -80,6 +80,57 @@ export default function Profile() {
             <Text>https://github.com/aamir104512</Text>
           </View>
         </View>
+
+        <View style={styles.information}>
+          {/*country image view */}
+          <View>
+            <Image
+              source={require('../images/website.png')}
+              resizeMode="contain"
+              style={styles.icon}
+            />
+          </View>
+          {/*country text view */}
+          <View>
+            <Text
+              style={{color: Colors.white, fontWeight: 'bold', fontSize: 16}}>
+              Country
+            </Text>
+            <Text>Pakistan</Text>
+          </View>
+        </View>
+
+        <View style={{height: 1, backgroundColor: Colors.white, marginHorizontal: 30, marginTop: 30}}></View>
+
+        {/* social links section */}
+        <View style={{alignItems: 'center', marginTop: 30}}>
+          <Text style={{color: Colors.white, fontSize: 22, fontWeight: 'bold'}}>
+            Social Links
+          </Text>
+        </View>
+        <View style={styles.socialView}>
+          <TouchableOpacity>
+            <Image
+              source={require('../images/facebook.png')}
+              resizeMode="contain"
+              style={styles.socialImages}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={require('../images/instagram.png')}
+              resizeMode="contain"
+              style={styles.socialImages}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={require('../images/twitter.png')}
+              resizeMode="contain"
+              style={styles.socialImages}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -115,5 +166,14 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.secondary,
     paddingHorizontal: 10,
     borderRadius: 20,
+  },
+  socialView: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 15,
+  },
+  socialImages: {
+    height: 40,
+    width: 40,
   },
 });
