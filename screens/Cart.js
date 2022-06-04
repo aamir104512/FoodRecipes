@@ -37,7 +37,7 @@ export default function Cart() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#161516',
+    backgroundColor: Colors.primaryBackground,
     padding: 20,
   },
   cartHeader: {},
